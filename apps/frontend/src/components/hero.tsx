@@ -1,12 +1,15 @@
+"use client"
 import React from 'react'
 import Btn from './btn'
+import { useRouter } from 'next/navigation'
 
 const Hero = () => {
+  const navigate = useRouter()
   return (
     <div className='flex flex-col justify-center overflow-hidden text-center w-full h-dvh '>
         <div className='max-w-6xl mx-auto'>
 
-              <div className='text-7xl text-[#ffffff] font-bold'>
+              <div className='text-7xl font-bold'>
                 <p>Chat&apos;s</p>
               </div>
               
@@ -15,7 +18,7 @@ const Hero = () => {
               </div>
 
               <div className='shadow-input py-2'>
-                  <Btn/>
+                  <Btn onClick={()=> navigate.push('/chats')}/>
               </div>
         </div>
     </div>
