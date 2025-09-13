@@ -6,7 +6,7 @@ import { Button } from './ui/button'
 import { ScrollArea } from './ui/scroll-area'
 import Back from './home-button'
 const ChatComp = () => {
-    const {messages , sendMessage } = useSocket("ws://localhost:8080")
+    const {messages , sendMessage } = useSocket("https://backend-q1ta.onrender.com")
     const [username , setUsername] = useState("")
     const [tempName , setTempname] = useState("")
     const [input , setInput] = useState("")
