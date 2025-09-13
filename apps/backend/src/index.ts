@@ -1,7 +1,7 @@
 import express from "express"
 import { WebSocketServer } from "ws"
 const app = express()
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 const httpServer = app.listen(PORT)
 
 
