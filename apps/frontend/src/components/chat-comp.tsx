@@ -51,15 +51,19 @@ const ChatComp = () => {
             <div className='px-3 sm:px-4 mb-3'>
               <p className='mb-2 text-2xl'>Chats appears here!</p>
             <ScrollArea className='h-[300px] sm:h-[400px] w-[300px] sm:w-[750px] rounded-sm border p-4'>
-                {messages.map((msg, index) => (
-                  <div
+               {messages.map((msg, index) => (
+                <div
                   key={index}
-                  className="mb-2"
-                  >
-                    <strong>{msg.username}:- </strong>
-                    {msg.text}
+                  className={`mb-2 flex ${msg.username === username ? "justify-end" : "justify-start"}`}
+                >
+                  <div className="px-3 py-2 rounded-sm backdrop-blur-3xl bg-neutral-600  max-w-[60%] border">
+                    {msg.username !== username && (
+                      <div className="text-xs opacity-70 mb-1">{msg.username}</div>
+                    )}
+                    <div>{msg.text}</div>
                   </div>
-                ))}
+    </div>
+  ))}
           </ScrollArea>
           </div>
           
