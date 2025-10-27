@@ -28,7 +28,7 @@ const ChatComp = () => {
         </div>
 
       <div className="flex flex-col w-full justify-center px-4 sm:px-3 items-center h-screen">
-        <div className='font-medium text-sm'>
+        <div className='font-medium text-lg text-center px-2'>
           This will be your public display name.
         </div>
         <div className='flex pt-4 gap-2'>
@@ -56,7 +56,7 @@ const ChatComp = () => {
                   key={index}
                   className={`mb-2 flex ${msg.username === username ? "justify-end" : "justify-start"}`}
                 >
-                  <div className="px-3 py-2 rounded-sm backdrop-blur-3xl bg-neutral-600  max-w-[60%] border">
+                  <div className="px-3 py-2 rounded-sm backdrop-blur-3xl dark:bg-[#5a5370] bg-amber-50 max-w-[60%] border">
                     {msg.username !== username && (
                       <div className="text-xs opacity-70 mb-1">{msg.username}</div>
                     )}
